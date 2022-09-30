@@ -9,7 +9,7 @@ namespace MVC.Repositories.Interface
     public interface IGeneralRepository<Entity>
        where Entity : class
     {
-        Task<List<Entity>> Get();
+        List<Entity> GetAll();
         Task<Entity> Get(int id);
         HttpStatusCode Post(Entity entity);
         HttpStatusCode Put(int id, Entity entity);

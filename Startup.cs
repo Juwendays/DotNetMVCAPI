@@ -31,6 +31,7 @@ namespace MVC
             services.AddControllersWithViews();
             services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connection")));
             services.AddScoped<RegionRepository>();
+            services.AddScoped<LocationRepository>();
             //services.JWTConfigure(Configuration);
             services.AddSession(options=>options.IdleTimeout = TimeSpan.FromMinutes(5));
         }
@@ -65,6 +66,15 @@ namespace MVC
             });*/
 
             app.UseRouting();
+            app.Use(async (context, next) =>
+            {
+                var JWToken = context.Session.GetString("JWToken");
+                if (!string.IsNullOrEmpty(JWToken))
+                {
+                    context.Request.Headers.Add("Authorization", "Bearer " + JWToken);
+                }
+                await next();
+            });
 
             app.UseAuthentication();
             app.UseAuthorization();

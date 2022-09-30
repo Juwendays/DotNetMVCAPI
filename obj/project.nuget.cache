@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PdH6Elyjt4toTSPJzg5wXVLdWVhg2iVdcvM/GH9L6bJ2m3jQW/I0YcghhJKYcnmcQDJrrOCUGtK9sRt0PGiVRw==",
+  "dgSpecHash": "Ntwjbk+tKDP4LnDSUrOI/g3WOyE4qdN1TjfLnnQXgz9QKFhcgnpkDsuNhDM8Kr5mUNyWV6HPu2w+oFbhg+QEZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient-main\\MVC.csproj",
+  "projectFilePath": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient\\MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alvin Juweda\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\Alvin Juweda\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

@@ -8543,11 +8543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient-main\\MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient\\MVC.csproj",
       "projectName": "MVC",
-      "projectPath": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient-main\\MVC.csproj",
+      "projectPath": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient\\MVC.csproj",
       "packagesPath": "C:\\Users\\Alvin Juweda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient-main\\obj\\",
+      "outputPath": "C:\\Users\\Alvin Juweda\\source\\repos\\HttpClient\\MVCClient-main\\MVCClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alvin Juweda\\AppData\\Roaming\\NuGet\\NuGet.Config",

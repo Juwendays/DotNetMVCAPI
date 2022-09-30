@@ -21,7 +21,7 @@ namespace MVC.Base
         [HttpGet]
         public async Task<JsonResult> GetAll()
         {
-            var result = await repository.Get();
+            var result = repository.GetAll();
             return Json(result);
         }
 

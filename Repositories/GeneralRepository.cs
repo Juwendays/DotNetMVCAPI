@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using MVC.Repositories.Interface;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +25,12 @@ namespace MVC.Repositories
         {
             this.address = "https://localhost:44392/api/";
             this.request = request;
-            _contextAccessor = new HttpContextAccessor();
+          /*  _contextAccessor = new HttpContextAccessor();
             httpClient = new HttpClient
             {
                 BaseAddress = new Uri(address)
             };
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", _contextAccessor.HttpContext.Session.GetString("Token"));
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", _contextAccessor.HttpContext.Session.GetString("Token"));*/
         }
 
         public HttpStatusCode Delete(int id)
@@ -38,14 +39,28 @@ namespace MVC.Repositories
             return result.StatusCode;
         }
 
-        public async Task<List<Entity>> Get()
-        {
-            List<Entity> entities = new List<Entity>();
+        /* public async Task<List<Entity>> Get()
+         {
+             List<Entity> entities = new List<Entity>();
 
-            using (var response = await httpClient.GetAsync(request))
-            {
-                string apiResponse = await response.Content.ReadAsStringAsync();
-                entities = JsonConvert.DeserializeObject<List<Entity>>(apiResponse);
+             using (var response = await httpClient.GetAsync(request))
+             {
+                 string apiResponse = await response.Content.ReadAsStringAsync();
+                 entities = JsonConvert.DeserializeObject<List<Entity>>(apiResponse);
+             }
+             return entities;
+         }*/
+
+        public List<Entity> GetAll() {
+            List<Entity> entities = new List<Entity>();
+            var responseTask = httpClient.GetAsync(request);
+            var result = responseTask.Result;
+            if (result.IsSuccessStatusCode) {
+                var resultJsonString = result.Content.ReadAsStringAsync();
+                resultJsonString.Wait();
+                JObject rss = JObject.Parse(resultJsonString.Result);
+                JArray data = (JArray)rss["data"];
+                entities = JsonConvert.DeserializeObject<List<Entity>>(JsonConvert.SerializeObject(data));
             }
             return entities;
         }

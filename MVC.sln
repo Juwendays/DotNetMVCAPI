@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "MVC.csproj", "{F2096EA6-3FAD-43C6-B9E4-768924325397}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BelajarAPI", "..\..\netAPIWithAuth-main\netAPIWithAuth-main\BelajarAPI.csproj", "{D84D1BBE-2B73-45E5-A678-8D8803D1A0DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BelajarAPI", "..\..\DotNetMVCAPI\API\BelajarAPI.csproj", "{57F7BEE5-EE19-4CB2-8A95-15649A6608A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F2096EA6-3FAD-43C6-B9E4-768924325397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2096EA6-3FAD-43C6-B9E4-768924325397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2096EA6-3FAD-43C6-B9E4-768924325397}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D84D1BBE-2B73-45E5-A678-8D8803D1A0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D84D1BBE-2B73-45E5-A678-8D8803D1A0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D84D1BBE-2B73-45E5-A678-8D8803D1A0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D84D1BBE-2B73-45E5-A678-8D8803D1A0DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F7BEE5-EE19-4CB2-8A95-15649A6608A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F7BEE5-EE19-4CB2-8A95-15649A6608A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F7BEE5-EE19-4CB2-8A95-15649A6608A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F7BEE5-EE19-4CB2-8A95-15649A6608A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

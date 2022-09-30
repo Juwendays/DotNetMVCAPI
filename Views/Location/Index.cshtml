@@ -1,52 +1,111 @@
 ﻿@model IEnumerable<MVC.Models.Location>
 
-@{
-    ViewData["Title"] = "Location";
-}
+@{ ViewData["Title"] = "Location"; }
 
 <h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.StreetAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PostalCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.StreetAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PostalCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<!-- table 1 -->
+
+<div class="flex flex-wrap -mx-3">
+    <div class="flex-none w-full max-w-full px-3">
+        <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+            <div class="p-6 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
+                <h6 class="dark:text-white">Location table</h6>
+            </div>
+            <div class="flex-auto px-0 pt-0 pb-2">
+                <div class="p-0 overflow-x-auto">
+                    <table class="items-center w-full mb-0 align-top border-collapse dark:border-white/40 text-slate-500" id="LocationTable">
+                        <thead class="align-bottom">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.StreetAddress)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PostalCode)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.City)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Country)
+                                </th>
+                                <th>
+                                   <h3>Action</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.StreetAddress)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PostalCode)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.City)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Country.Name)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                        </tbodyclass="align-bottom">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<table class="table" id="LocationTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.StreetAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StreetAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostalCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@

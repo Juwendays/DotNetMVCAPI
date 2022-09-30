@@ -28,6 +28,21 @@ namespace MVC.Controllers
             return View();
         }
 
+        public IActionResult Forbidden()
+        {
+            return View("Forbidden");
+        }
+
+        public IActionResult Unauth()
+        {
+            return View("Unauthorized");
+        }
+
+        public IActionResult NotFound404()
+        {
+            return View("NotFound");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
